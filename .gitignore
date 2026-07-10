@@ -141,3 +141,13 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# ===== Unity (unity/client/) =====
+unity/client/[Ll]ibrary/
+unity/client/[Tt]emp/
+unity/client/[Oo]bj/
+unity/client/[Ll]ogs/
+unity/client/[Uu]serSettings/
+unity/client/[Bb]uild/
+unity/client/[Bb]uilds/
+unity/client/.vs/
