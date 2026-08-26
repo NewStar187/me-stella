@@ -12,11 +12,19 @@
 
 
 
-\## A. 빌드·배포 파이프라인
+\## 측정 결과
 
-측정: Unity WebGL 빌드 → Vercel 배포 → 브라우저 실행 성공 여부
 
-Go / No-Go (이진 판정)
+
+\### A. 빌드·배포 파이프라인
+
+\- 2026-08-27 빌드 성공 (311초, 에러 0). 산출물: index.html + Build + TemplateData
+
+\- Vercel 배포 미실시 → A 최종 판정 보류
+
+\- 설정: Compression Format = Brotli, Decompression Fallback = ON
+
+&#x20; ※ Fallback ON 상태의 로딩 측정값은 보수적(불리) 수치임
 
 
 
@@ -46,7 +54,7 @@ Go: 7초 이하 / Cond.Go: 10초 이하 / No-Go: 10초 초과
 
 &#x20;     측정값이 Go 경계 절반 초과 시 최적화를 선제 배정한다.
 
-빌드 총 용량 기록: \_\_\_MB
+빌드 총 용량 기록: 11.43MB
 
 
 
