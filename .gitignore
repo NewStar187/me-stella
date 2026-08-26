@@ -142,12 +142,28 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
 
-# ===== Unity (unity/client/) =====
-unity/client/[Ll]ibrary/
-unity/client/[Tt]emp/
-unity/client/[Oo]bj/
-unity/client/[Ll]ogs/
-unity/client/[Uu]serSettings/
-unity/client/[Bb]uild/
-unity/client/[Bb]uilds/
-unity/client/.vs/
+# ===== Unity =====
+# 경로 무관 패턴 — 프로젝트 폴더 깊이가 바뀌어도 동작
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]serSettings/
+[Bb]uild/
+[Bb]uilds/
+.vs/
+
+# Unity 생성 파일
+*.csproj
+*.sln
+*.unityproj
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb.meta
+*.apk
+*.aab
+*.unitypackage
+sysinfo.txt
+crashlytics-build.properties
