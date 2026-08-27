@@ -167,3 +167,9 @@ vite.config.ts.timestamp-*
 *.unitypackage
 sysinfo.txt
 crashlytics-build.properties
+
+# Unity 빌드 산출물 중 웹 서빙용 복사본만 예외 (스파이크)
+!web/public/unity/
+!web/public/unity/**
+!web/public/unity/Build/
+!web/public/unity/Build/**
