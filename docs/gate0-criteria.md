@@ -92,3 +92,47 @@ Go / No-Go (이진 판정)
 
 \## 측정 결과 (실측 후 기입 — 현재 공란)
 
+
+
+\### D. HTML 오버레이 IME — Go 잠정
+
+\- 데스크톱 Chrome 물리 키보드: 한글 입력·조합·삭제·SendMessage 표시 정상
+
+\- 표시: OverlayInputReceiver에서 값 수신·화면 출력 확인
+
+\- 최종 판정 보류: 모바일 가상 키보드 (S23+/iOS Safari) 실측 필요
+
+
+
+\### E. API 왕복 지연 — Go
+
+\- 20회 왕복, 성공 20 / 실패 0
+
+\- 최소 424ms / 중앙값 466ms / P75 521.1ms
+
+\- 기준 1000ms 대비 약 52% 사용, 여유 확보
+
+\- 티어 3 상태 그래프 채택 조건 1: 충족
+
+\- 비고: /api/health = Vercel Route Handler + Prisma + Supabase 서울 리전 왕복
+
+
+
+\### F. 수식 사전 렌더 이미지 표시 — Go
+
+\- 원본(1128×286) → RawImage 표시 확인, AspectRatioFitter 정상
+
+\- 파이프라인: 웹 셸(/formula-sample.png) → UnityWebRequestTexture → 표시
+
+\- 티어 3 상태 그래프 채택 조건 2: 충족
+
+\- 한계: 이번 측정은 매트플롯립 렌더 프록시 사용. 실제 KaTeX 사전 렌더 + Supabase
+
+&#x20; Storage + CORS는 별도 검증 필요 (콘텐츠 파이프라인 F-11 항목)
+
+
+
+\### C. 모바일 브라우저 성능 (1차 → 재관찰 필요)
+
+\- 이번 씬은 UI·API·이미지 포함 실질 관찰 대상. 폰 재측정 후 최종 판정.
+
